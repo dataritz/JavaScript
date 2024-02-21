@@ -1,0 +1,30 @@
+<!-- Finding HTML elements by tag name
+    Fetch content from all paragraph and display in console -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>I am in paragraph 1</p>
+    <p>I am in paragraph 2</p>
+    <p>I am in paragraph 3</p>
+    <p>I am in paragraph 4</p>
+    <button onclick="abc()">ClickMe</button>
+    <h2 id="heading"></h2>
+    <script>
+        function abc(){
+            var allPara = document.getElementsByTagName('p')
+            console.log(allPara); //Display all para object
+            console.log(typeof(allPara)); // Display type of
+            for(i=0;i<allPara.length;i++){ // Display content of each paragarph
+                console.log(allPara[i].innerText)
+            }
+            
+        }
+    </script>
+</body>
+</html>
