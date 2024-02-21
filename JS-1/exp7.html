@@ -1,0 +1,27 @@
+<!-- Finding HTML elements by querySelector() method  and -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">I am in Para-1</p>
+    <p class="p2">I am in Para-2</p>
+    <p>I am in Para-3</p>
+    <button onclick="abc()">Click Me</button>
+    <script>
+        function abc(){
+            let para1 = document.querySelector('#p1').innerText; // using id
+            let para2 = document.querySelector('.p2').innerText; // Using Class Name
+            let para3 = document.querySelector('p').innerText; // Using tag name it return first p tag
+            let para4 = document.querySelectorAll('p') // Using Tag Name and querySelectorAll
+            console.log(para1);
+            console.log(para2);
+            console.log(para3);
+            console.log(para4);
+        }
+    </script>
+</body>
+</html>
