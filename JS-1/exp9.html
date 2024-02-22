@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            position: absolute;
+            left:0px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="left()" style="margin-right: 200px;"> << </button> <button onclick="right()"> >> </button>
+    <br>
+    <img src="../image/ball.png">
+    <script>
+        pos=0;
+        let elm = document.querySelector('img');
+        function left(){
+            if(pos<0)
+                pos=0;
+            else{
+                pos-=20;
+                elm.style.left = pos + 'px';
+            }
+        }
+        function right(){
+            if(pos>350)
+                pos=0;
+            else{
+                pos+=20;
+                elm.style.left = pos +'px';
+            }
+        }
+    </script>
+</body>
+</html>
