@@ -1,0 +1,29 @@
+<!--
+    Input Events
+    onblur - When a user leaves an input field
+    onkeydown - When a user is pressing/holding down a key
+    onkeyup - When the user releases a key
+    onchange - When a user changes the content of an input field
+    onfocus - When an input field gets focus
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter your Name <input type="text" onblur="this.value = this.value.toUpperCase()">
+    Enter mobile <input type="text" onkeyup="Validate(this)">
+    <script>
+        function Validate(e){
+            if(e.value.length < 10)
+                e.style.color = 'red';
+            else
+                e.style.color = 'black';
+        }
+    </script>
+</body>
+</html>
