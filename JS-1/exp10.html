@@ -1,0 +1,36 @@
+<!--Creating New HTML Elements (Nodes)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Any Number<input type="text" id="t1"><button onclick="addToDiv()">Click Me</button>
+    <div id="d1" style="border: 1px solid red;margin-top: 10px;">
+
+    </div>
+    
+    <script>
+        let counter = 1;
+        function remove(id){
+            document.querySelector('#d1').removeChild(id);
+        }
+        function addToDiv(){
+            let val  = document.querySelector('#t1').value;
+            let row = document.createElement('p');
+            let newelem1 = document.createElement('b');
+            let newelem2 = document.createElement("button");
+            let idValue = 'p'+counter++;
+            row.setAttribute('id',idValue);
+            newelem1.innerText = val;
+            newelem2.innerText = 'Delete';
+            newelem2.setAttribute('onclick',`remove(${idValue})`);
+            row.appendChild(newelem1);
+            row.appendChild(newelem2);
+            document.querySelector('#d1').appendChild(row);
+        }
+    </script>
+</body>
+</html>
