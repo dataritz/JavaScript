@@ -1,0 +1,20 @@
+<!-- Changing HTML Style-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">This is Paragraph</p>
+    <button onclick="changeTextColor()">Click Me</button>
+    <script>
+        function changeTextColor(){
+            let elm = document.querySelector('#p1');
+            elm.style.color = 'red';
+        }
+    </script>
+</body>
+</html>
