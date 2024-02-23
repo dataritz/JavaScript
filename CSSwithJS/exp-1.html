@@ -1,3 +1,5 @@
+<!-- Change CSS inline properties with JavaScript -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <p id="p1">I am Para1 </p>
+    <p id = 'p2' style="border:2px solid red"> I Have my own Style</p>
+    <button onclick="changestyle()">Click to Change Style</button>
+    <script>
+        function changestyle(){
+            document.querySelector('#p1').style.color = 'red';
+            document.querySelector('#p2').style.color = 'green';
+        }
+    </script>
 </body>
 </html>
