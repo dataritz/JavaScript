@@ -1,0 +1,26 @@
+<!-- Change CSS class in JavaScript
+    1. Add new css Class
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .newstyle{
+            border :3px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">I am Para 1</p>
+    <button onclick="addNew()">Click Me</button>
+    <script>
+        function addNew(){
+            // Adding a CSS class name to an element
+            document.querySelector('#p1').classList.add('newstyle');
+        }
+    </script>
+</body>
+</html>
