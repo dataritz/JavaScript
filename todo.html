@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .todoinput {
+            display: grid;
+            grid-template-columns: 50% 10% 10%;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Welcome to TO-DO List</h1>
+        <input type="text" id="t1">
+        <button onclick="addItem()">Add</button><br>
+        <div id="d1">
+
+        </div>
+    </div>
+    <script>
+       const inputBox = document.querySelector('#t1');
+       const  outputArea = document.querySelector('#d1');
+
+        function addItem(){
+            const row = document.createElement('div');
+            row.classList.add('todoinput');
+            const msg = document.createElement('i');
+            msg.innerText = inputBox.value;
+            msg.setAttribute('name','msg');
+            row.appendChild(msg);
+
+            const checkB = document.createElement('button');
+            checkB.setAttribute('name','check');
+            checkB.setAttribute('class','material-symbols-outlined');
+            checkB.innerText = 'done';
+            row.appendChild(checkB);
+
+            const delB = document.createElement('button');
+            delB.setAttribute('name','delete');
+            delB.setAttribute('class','material-symbols-outlined');
+            delB.innerText = 'delete';
+            row.appendChild(delB);
+
+            outputArea.appendChild(row);
+        }
+
+        function remove(e){
+            const elm = e.target;
+            if(elm.name == 'check'){
+                elm.parentElement.childNodes[0].setAttribute('style','text-decoration: line-through')
+            }
+            if(elm.name == 'delete')
+                elm.parentElement.remove();
+        }
+
+        outputArea.addEventListener('click',remove);
+    </script>
+</body>
+</html>
