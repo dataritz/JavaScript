@@ -1,0 +1,31 @@
+<!-- Change CSS class in JavaScript
+    1. remove certain classes
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .newstyle{
+            border :3px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">I am Para 1</p>
+    <button onclick="addNew()">Add New Class</button>
+    <button onclick="RemoveClass()">Remove Class</button>
+    <script>
+        function addNew(){
+            // Adding a CSS class name to an element
+            document.querySelector('#p1').classList.add('newstyle');
+        }
+        function RemoveClass(){
+            document.querySelector('#p1').classList.remove('newstyle');
+        }
+
+    </script>
+</body>
+</html>
