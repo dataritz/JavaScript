@@ -1,0 +1,25 @@
+<!-- Change CSS class in JavaScript
+    1. toggle classes
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .newstyle{
+            border :3px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">I am Para 1</p>
+    <button onclick="toggleClass()">Toggle Class</button>
+    <script>
+        function toggleClass(){
+            document.querySelector('#p1').classList.toggle('newstyle');
+        }
+    </script>
+</body>
+</html>
